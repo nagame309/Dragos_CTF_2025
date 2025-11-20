@@ -1,11 +1,11 @@
 # Dragos CTF 2025 Archive
 
-本儲存庫主要用於保存我在 Dragos CTF 2025 中解出的題目內容、相關附件與詳細解題紀錄。  
+本儲存庫主要用於保存 Dragos CTF 2025 的題目內容、相關附件與詳細解題紀錄。  
 
 - **活動頁面**: [Dragos CTF 2025](https://hub.dragos.com/ctf-registration-25)
 - **附件下載**: 由於 GitHub 檔案大小限制，題目所需之大型附件與原始檔案將存放於 Google Drive。
   - [**點擊前往 Google Drive 下載區**](https://drive.google.com/drive/folders/1lTWz-7PUz86P_oANkoxhRbVwL9DSi5ul?usp=drive_link)
-- 本專案並非完整的賽事題庫，僅收錄我有成功解出的題目。 
+- 本專案並非完整的賽事題庫，僅收錄我有開啟的題目。 
 
 ## 檔案保存與解壓說明
 
