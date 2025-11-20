@@ -15,4 +15,5 @@ What critical security control, as defined by the 5CCs, could have prevented thi
 ---
 **Flag：**  `Defensible Architecture`  
 **Write-Up：**  
-參考連結：https://www.dragos.com/blog/the-sans-ics-five-critical-controls-a-practical-framework-for-ot-cybersecurity/
+情境中提到的 poorly segmented (分割不良) 是指向架構缺陷的線索，如果 ACME 擁有 `Defensible Architecture` (防禦性架構)，即使承包商的網絡被攻陷，攻擊者也無法直接橫向移動至 OT 系統。  
+參考資料：[《SANS ICS 5 Critical Controls: Essential Framework for Critical Infrastructure Protection》](https://www.dragos.com/blog/the-sans-ics-five-critical-controls-a-practical-framework-for-ot-cybersecurity/)

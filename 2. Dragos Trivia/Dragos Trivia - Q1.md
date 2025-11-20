@@ -13,6 +13,8 @@ How many threat groups were active in 2024?
 ---
 **Flag：** `9`  
 **Write-Up：**  
-根據 Dragos 發布的[《Dragos Reports OT/ICS Cyber Threats Escalate Amid Geopolitical Conflicts and Increasing Ransomware Attacks》](https://www.dragos.com/resources/press-release/dragos-reports-ot-ics-cyber-threats-escalate-amid-geopolitical-conflicts-and-increasing-ransomware-attacks)，23 個追蹤中的 OT 威脅團體，有 9 個在 2024 年處於活躍狀態。
+根據[《Dragos Reports OT/ICS Cyber Threats Escalate Amid Geopolitical Conflicts and Increasing Ransomware Attacks》](https://www.dragos.com/resources/press-release/dragos-reports-ot-ics-cyber-threats-escalate-amid-geopolitical-conflicts-and-increasing-ransomware-attacks)，Dragos 分析師追蹤的 23 個 OT 威脅團體中，有 `9` 個在 2024 年處於活躍狀態。
+
+![alt text](image.png)
 
 
