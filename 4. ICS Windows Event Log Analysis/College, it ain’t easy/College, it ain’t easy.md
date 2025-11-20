@@ -23,11 +23,11 @@ certutil -decode lats.txt lats.exe
 ```
 證實前題推論無誤。
 
-![alt text](image-2.png)
+![alt text](image.png)
 
 接著從 `PowerShellLogs.csv` 和 `PowerShellLogs.evtx` 可以觀察到，`SequenceNumber=233` 是由多個 Base64 的 value 組成 (1009個)。
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 這邊利用 Python 腳本讀取 csv 檔內的 Message 欄位，並將 value 字串進行組合再解碼，得到攻擊者使用的惡意程式 `decode_paloay.exe`。
 
@@ -37,8 +37,8 @@ certutil -decode lats.txt lats.exe
 Get-FileHash .\decoded_payload.exe
 ```
 
-![alt text](image-3.png)
+![alt text](image-2.png)
 
 接著在 Behavior 頁面搜尋 codename，得到 flag: `All I want for Christmas is a better name for this`。
 
-![alt text](image-1.png)
+![alt text](image-3.png)

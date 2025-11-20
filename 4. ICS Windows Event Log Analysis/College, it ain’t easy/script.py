@@ -3,7 +3,7 @@ import re
 import base64
 import os
 
-# --- 設定區 ---
+# -------------
 CSV_FILE = "PowerShellLogs.csv"
 OUTPUT_FILE = "decoded_payload.exe"
 TARGET_SEQ = "233"  # 題目指定的 SequenceNumber
@@ -17,7 +17,7 @@ def main():
 
     print(f"[*] Reading {CSV_FILE}...")
     try:
-        # 只讀取 Message 欄位以節省記憶體
+        # 讀取 Message 欄位
         df = pd.read_csv(CSV_FILE, usecols=['Message'], dtype={'Message': 'str'})
     except Exception as e:
         print(f"[-] Error reading CSV: {e}")
@@ -35,7 +35,7 @@ def main():
     # 3. 提取與排序
     print("[*] Extracting and sorting fragments...")
     
-    # 編譯 Regex 提升效能 (保留你原本驗證成功的 Regex)
+    # 編譯 Regex 
     re_detail_seq = re.compile(r"DetailSequence=(\d+)")
     re_payload_val = re.compile(r'ParameterBinding\(Out-Default\): name="InputObject"; value="(.*?)"')
 
