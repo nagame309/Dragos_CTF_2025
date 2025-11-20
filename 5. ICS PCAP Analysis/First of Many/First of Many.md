@@ -16,5 +16,19 @@ Flag Format: LONGSTRINGALLTOGETHER
 * Concatenate multiple messages together, if any.
 
 ---
-**Flag：** HEXISFUNBUTWIRESHARKISBETTER  
+**Flag：** `HEXISFUNBUTWIRESHARKISBETTER`  
 **Write-Up：**  
+題目表明檔案格式是 `.txt` 且可以用 Wireshark UI 提取。
+打開 Wireshark 點擊 `File` -> `Export Objects` -> `FTP-DATA` 找到 `.txt` 檔案保存。
+
+![alt text](image.png)
+
+利用 HxD 打開 `Lorem ipsum dolor sit amet.txt`，發現裡面有 ASCII Art。
+
+![alt text](image-1.png)
+
+刪除一些文字使其能夠對齊，並將十六進制的 `FF` 改為 `00`，方便查看。
+
+![alt text](image-2.png)
+
+組合起來得到 flag: `HEXISFUNBUTWIRESHARKISBETTER`。

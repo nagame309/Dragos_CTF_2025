@@ -14,13 +14,15 @@ Free Hint: There are more than one interface and there are multiple builds in th
 * Each Interface device has its own Interface Description Block.
 
 ---
-**Flag：** 64-bit Windows 11 (24H2), build 26100  
+**Flag：** `64-bit Windows 11 (24H2), build 26100`  
 **Write-Up：**
 
 cd 到 Wireshark 的安裝目錄，執行以下 command：
+
 ```
 .\capinfos.exe -M [path to tls.pcapng]
 ```
+
 `-M` 會列出所有介面資訊。  
 
 接著找到 Number of packets 不為 0 的 Interface，Operating system 即為 Flag。

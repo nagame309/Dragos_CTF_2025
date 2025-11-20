@@ -34,7 +34,7 @@ certutil -decode lats.txt lats.exe
 再執行以下指令，計算還原檔案的 SHA256 Hash 值，並將其上傳至 [VirusTotal](https://www.virustotal.com/gui/home/upload) 進行分析。
 
 ```
-Get-FileHash .\decoded_payload.exe
+Get-FileHash [path to decoded_payload.exe]
 ```
 
 ![alt text](image-2.png)
