@@ -15,5 +15,22 @@ Flag Format: dddddddd
 * The LinkType field for the correct Interface ID needs to be fixed
 
 ---
-**Flag：**  
+**Flag：** `71911943`  
 **Write-Up：**  
+從題目來看，該題首先要做的是修復檔案的 LinkType，因為目前的 LinkType 是錯誤的，導致 Wireshark 用錯誤的格式解讀。
+
+![alt text](image.png)
+
+點擊 `Statistics` -> `Capture File Properties`，看到 Encapsulation 欄位目前顯示的是 `DisplayPort AUX channel with Unigraf pseudo-header`，代表 Wireshark 目前把這些封包當作 `DisplayPort` 的訊號。
+
+![alt text](image-1.png)
+
+DisplayPort AUX 的 LinkType 代碼是 275 (Hex: 0x0113)。在 Little Endian 中會寫成 `13 01`。利用 HxD 打開檔案，找到 `13 01` 改為 `01 00` (Ethernet)。
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)
+
+保存後重新打開檔案，找到 ICMP 封包的 Originate Timestamp 欄位，得到 flag: `71911943` 。
+
+![alt text](image-4.png)
