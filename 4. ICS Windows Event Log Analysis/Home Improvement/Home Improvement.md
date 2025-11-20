@@ -16,7 +16,13 @@ flag format: flag{xxxxxxxxzxxx} or xxxxxxxxzxxx
 **Flag：**  ```flag{certutil.exe}```
 
 **Write-Up：**   
-從提供的 Windows 事件記錄可見攻擊者先以 `type lats.txt` 讀取名為 `lats.txt` 的文字檔，內容包含 `-----BEGIN CERTIFICATE-----` 與大量 Base64 區塊，說明該檔案為 Base64 編碼。在 Windows 環境中，常用的內建方式是使用 ```certutil.exe -decode``` 將 Base64 文字還原為二進位檔案。以此推測攻擊者使用的 living-off-the-land 工具為 ```certutil.exe```。
+從提供的 Windows 事件記錄觀察到攻擊者以 `type` 指令讀取名為 `lats.txt` 的文字檔，該檔案內容包含大量 `Base64` 區塊。
+
 ![alt text](image.png)
 
 ![alt text](image-1.png)
+
+推測攻擊者使用了混淆技術，將惡意 Payload 以 Base64 形式帶入環境以規避偵測。而在 Windows 環境中，常用的內建方式是使用 `certutil.exe -decode` 將 Base64 文字還原為二進位檔案。
+
+以此推測攻擊者使用的工具為 `certutil.exe`。
+

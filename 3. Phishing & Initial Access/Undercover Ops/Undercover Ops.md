@@ -13,13 +13,14 @@ Reviewing the PCAP will show that multiple files were transferred across the net
 * Is there a place in Wireshark where we can view transferred files?
 
 ---
-**Flag：**  Windows11Upgrade.pdf  
+**Flag：**  `Windows11Upgrade.pdf`  
 **Write-Up：**  
+題目提到 placed proper instructions in her Downloads directly (直接把檔案放到下載資料夾)，暗示使用的是應該是 SMB，而不是透過瀏覽器下載。
 
-從 Wireshark 的 `Analyze` -> `Expert Information` 發現有 SMB2 malformed 封包。
+打開 Wireshark 點擊 `Analyze` -> `Expert Information` 發現確實有 SMB2 malformed 封包。
 
 ![alt text](image.png)
 
-`File` -> `Export Objects` -> `SMB` 看到 Flag。
+點擊 `File` -> `Export Objects` -> `SMB` 發現 Flag: `Windows11Upgrade.pdf`。
 
 ![alt text](image-1.png)
